@@ -1,0 +1,30 @@
+
+
+Look out for every week
+	- QC(Quality Check) - from another team
+	- coding challenges(mostly friday) - by me
+	- quizz - MCQ (mostly monday) - by me
+	
+
+every day - self learning for 1 hour ( 5 pm to 6 pm est)
+
+p0 - individual project - evaluated by QC
+
+p1 - paired up project - evaluated by me
+
+p2 - paired up project - evaluated by me
+
+p3 - group project given by centre of excellence(COE)
+   - a final p3 showcase in front of an audience
+
+Softwares required
+------------------
+
+1) AWS - Amazon Web Services
+	- create an account with aws
+2) install Git bash in your laptop
+3) create a github account in www.github.com
+4) install java  - jdk1.8 + , jdk 14
+5) IDE- Intergrated Development Environment - Eclipse
+	- Eclipse IDE for Enterprise Java Developers
+	  Version: 2020-12 (4.18.0) 

@@ -1,0 +1,39 @@
+what is a computer?
+
+	input, process, output
+
+computer - hardware/ software ?
+
+	hardwares - physical components
+	softwares - programs
+
+
+based on the level
+------------------
+	- low level programing
+	- middle level
+	- high level
+
+interpretors - line by line conversion
+compilers - converts as a whole
+
+2 types of softwares
+---------------------
+	- system softwares
+		- are for the system to work. eg - loader, drivers, OS
+		- C ( because of pointers)
+	- application softwares
+		- are for end users to use. eg - word, excel
+		- Java ( doesnt have the concept of pointers)
+
+memory
+------
+	- primary memory
+		- RAM (Random Access Memory)
+	- secondary memory
+		- Harddisk, pen drives, CD, cloud
+
+
+
+
+	
