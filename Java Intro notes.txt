@@ -1,0 +1,66 @@
+2 types of programming methodology
+----------------------------------
+1) procedural programming
+	eg. C
+2) object oriented programming
+	eg. Java, C++
+
+
+platform dependent - C and many more
+
+bms.c -------> source code
+
+compile or interpret
+
+bms.exe, bms.obj, bms.bak
+
+execute the exe file
+
+we get the output
+
+
+platform independent - Java
+---------------------
+
+bms.java ----------> source code
+
+compile the source code
+
+bms.class -----------> byte code( completely platform independent)
+
+JVM(Java Virtual Machine) -  to execute the byte code
+
+we get the output
+
+
+program
+--------
+
+input - process  - output
+
+setting the path in cmd
+------------------------
+set path=%path%;C:\Program Files\Java\jdk-14.0.2\bin;
+
+
+JRE - Java Runtime Environment
+
+IDE - Intergrated Development Environment
+
+Eclipse, intellij, netbeans
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
