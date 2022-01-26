@@ -1,0 +1,8 @@
+Unix	
+	https://www.interviewbit.com/unix-interview-questions/
+	
+Git	
+	https://www.interviewbit.com/git-interview-questions/
+	
+Core Java	
+	https://www.interviewbit.com/java-interview-questions/
