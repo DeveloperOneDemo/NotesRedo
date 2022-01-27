@@ -1,0 +1,95 @@
+JDK - Java Development Kit
+JVM - Java Virtual Machine
+JRE - Java Runtime Environment
+
+JRE = JVM + Garbage Collector + Byte code verifier + class loader + .....
+
+JDK = Java compiler + JRE
+
+API - Application Programming Interface (classes and interfaces)
+
+.jar - java archive
+.war - web archive
+.ear - enterprise archive (jar + war)
+
+
+operators in java
+-----------------
+1) Arithmetic operators
+	+ - * / %
+2) Relational operators - comparison operators and returns boolean
+	> < >= <= == !=
+3) Assignment operator
+	=
+4) Arithmetic Assignment operator
+	+= -+ *= /= %=
+
+	int a = 40;
+	a = a + 10;
+	a += 10; //which is the same as a=a+10;
+
+5) Logical operators
+	&& - AND,  || - OR, ! - NOT
+	
+	int a = 20;
+	int b = 30;
+	int c = 10;
+
+	if(a>b && a>c){
+		System .out.println(a + " is the greatest.");
+	}
+6) increment/decrement operators
+	++ --
+
+	int a = 50;
+	a++; // same as a=a+1 
+	System.out.println(a); // prints 51
+
+	post increment/decrement
+	int b = 30;
+	int c = b++; // post increment
+	System.out.println(c);  // prints 30
+	System.out.println(b);  // prints 31
+	
+	pre increment/decrement
+	int b = 30;
+	int c = ++b; // pre increment
+	System.out.println(c);  // prints 31
+	System.out.println(b);  // prints 31
+
+7) ternary operator
+	?:
+
+	int a = 40;
+	int b = 30;
+	int c = a>b?a:b;
+	System.out.println(c); // prints 40	
+
+8) bitwise operators
+	
+	& - bitwise and
+	| - bitwise or
+	<< - left shift operator
+	>> - right shift operator 
+	>>> - unsigned right shift operator
+		(whether you have a 1 or a 0 as the highest order bit, it
+			fills it up with 0)
+	
+
+
+
+1) program to find the cube of a number
+2) program to find half of number
+3) program to find the ascii number of a character -----> this involves the link between the int and char data type in java
+4) program to convert a celsius to a farenheit
+5) program to convert km to m
+
+
+
+
+
+
+
+
+
+
