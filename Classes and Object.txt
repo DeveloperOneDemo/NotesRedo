@@ -1,0 +1,78 @@
+classes and objects
+--------------------
+
+class - a blueprint
+	- a sketch
+	- a prototype
+
+what can a class contain?
+
+3 things
+---------
+
+1) variables - properties, attributes, data members, state
+2) method - function, members functions, actions
+          - are the actions performed
+// 3) class - inner classes - ignore this 
+
+
+class FordFigo{
+
+
+
+}
+
+default types
+-------------
+int, short, byte, long - 0
+float, double - 0.0
+boolean - false
+char - '\o'
+object type(String or any other) - null
+
+
+local variable - is a variable declared inside a method
+instance variable  - is a variable decalred inside a class(outside a method)
+
+ - local variables if not intialized, holds garbage values
+ - instance variables if not initialized, holds default values
+
+
+ - local variable take up memory in the stack
+ - instance variables take up memory in the heap
+
+
+
+assignment
+-----------
+1) I want to have a room and I should be able to calculate the floor area of the room. I should also be able to calculate the cost of 
+painting the walls of the room.
+
+2) I go to the bank and I should be able to create a new account, should be able to check the balance in my account, I should be able to withdraw 
+money from my account.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

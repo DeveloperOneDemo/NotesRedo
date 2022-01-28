@@ -1,0 +1,65 @@
+Rules
+-----
+1) Identifiers(name of a class, variable, method) should be meaningful, no single letter identifiers unless they are running variables
+2) naming conventions to be strictly followed
+	variables and methods - camel cased eg. mathMark , findArea()
+	class - title cased eg. BankAccount, Laptop, Book, SamsungMobile
+3) Code has to be formatted/aligned
+4) Code should be neat and presentable.
+
+
+flow control constructs
+-----------------------
+
+if variants
+	- simple if
+	- if else
+	- else if ladder
+	- nested if
+
+switch case
+
+break - explore how to use in loops and its use cases
+continue - explore how to use in loops and its use cases
+
+loops
+-----
+
+while loop
+do...while loop
+for loop
+enhanced for loop
+
+
+three things
+-------------
+1) intial value
+2) a condition 
+3) expression which always works to take u one step closer to making the condition false
+
+
+programs - logic/process should be in seperate methods
+--------
+1) print the greater of 2 numbers
+2) print the greatest of 3 numbers
+3) print if a number is even or odd
+4) print odd numbers upto N
+5) print the factorial of a number
+	5! is 5*4*3*2*1
+6) print if a number is prime or not
+	5 is prime
+	7 is prime
+	8 is not prime
+	12 is not prime
+7) print the sum of the digits of a number
+	567 means output should be 18 ( 5+6+7)
+8) print the fibonacci series upto N
+	0 1 1 2 3 5 8...
+
+
+
+
+print odd numbers upto N
+
+
+
