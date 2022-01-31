@@ -1,0 +1,81 @@
+access specifiers - used in front the members of a class ( variables and methods)
+		  - use in front of the class ( public or default)
+		  - a public class file should be saved in the name of the public class
+------------------
+
+				within class		within the package		outside the package + inherited classes		outside the package
+
+public 				yes			yes				yes						yes			
+protected			yes			yes				yes						no
+default/ no modifiers		yes			yes				no						no
+private				yes			no				no						no
+
+most restricted specifier - private
+least restricted specifier - public
+
+access modifiers - used in front of
+-----------------
+final - a variable
+
+      - a method
+
+      - a class
+
+abstract - a method
+
+         - a class
+
+synchronized( multithreading) - a method
+
+ 			      - as a block
+
+native - a method
+
+static - a variable
+		- only one memoery for static variable is allocated
+		- mutiple objects share the same memory
+		- static variables are shared accross objects
+		- static variables do not belong to a particular a object, they belong to the class
+		- for this reason we can access them with the class name
+       - a method
+		- a method which has  a common computation/logic 
+       - a class
+		- we use this for inner classes, cannot be used for outter class
+       - a static block
+		- can have any number of static blocks in a class
+		- are called automatically
+		- multiple static blocks would be called in the order that they are written
+		- purpose is to initialize static variables
+
+can a static method access a static member? - yes
+can a static method access a non-static member? - no
+can a non-static method access a static member? - yes
+can a non-static method access a non-static member? - yes
+
+
+sequence of memory allocation
+-----------------------------
+Room room; // here the object is not yet created
+
+1) class loader loads the Room class into memory
+2) memory for static variables are allocated
+3) the static blocks are called automatically in the order that they are writtern
+
+room = new Room(); // here the object is created
+4) memory for non-static variables are allocated
+5) constructors are called automatically - used to initialize non-static variables
+
+Arrays.sort();
+
+Room room2 = new Room();
+only step 4 and 5 executes
+
+strictfp, transient - could explore these as well
+
+
+constructors
+------------
+
+
+Scanner
+--------
