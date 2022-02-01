@@ -1,0 +1,153 @@
+OOPS Concepts -  strong interview question
+-------------
+
+A - Abstraction
+P - Polymorphism
+I - Inheritance
+E - Encapsulation
+
+
+Inheritance
+-----------
+	- one class can extend another class
+	- we call the class which is extended as base class/super class/parent class
+	- we call the class which is extending the other class as derived class/sub class/child class
+	- we acheive code reusability
+	- is-a relation is acheived here
+	- maintain the design principle by making sure to entend a class only if it satisfies the is-a relation
+
+
+types of inheritance
+--------------------
+1) single level inheritance
+
+class Animal{}
+class Dog extends Animal{}
+class Cat extends Animal{}
+
+
+2) multi level inheritance
+
+class FordFigo{}
+class FordFigoTitanium extends FordFigo{}
+class FordFigoTitaniumPlus extends FordFigoTitanium{}
+
+3) heirarchical inheritance
+
+class Animal{}
+class Dog extends Animal{}
+class Cat extends Animal{}
+class Cheetah extends Cat{}
+class Leopard extends Cat{}
+
+4) mutiple inheritance - not supported in java
+		       - one class cannot extends multiples classes
+				class A extends B, C ------> never possible in java
+
+ambiguity issue because of multiple inherantce - may want to explore it
+multiple inheritance is acheived through interfaces - still a debate
+
+
+Polymorphism - more than one form
+-------------
+1) method overloading
+	- have the same method name
+	- but different arguments
+		- either the number of arguments
+		- or the type of arguments
+		- or the order of arguments
+	- we donot consider the return type
+	- can be acheived in a single class or through a parent class and sub class
+	- we call this as static polymorphism / compile time polymorphism
+	- i look at it as a mere convinience
+eg.
+int mark = 20;
+System.out.println(mark);
+String message = "hello";
+System.out.println(message);
+boolean flag = true;
+System.out.println(flag);
+
+
+2) method overriding
+	- inheritence is mandotary/prerequitence - without inheritance method overriding cannot be acheived
+	- parent class and child class have the same method(includes return type, method name and the arguments)
+	- now i can say the method in the child class is overriding/masking the method in the parent class
+	- we are redefining a functionality of the parent class in the child class
+	- we can use super.methodName() to call the overriden method of the parent class from the child class
+	- we call it as dynamic polymorphism / runtime polymorhism
+
+when is the method bound to the reference variable?
+when is it decided which method has to be called? at compile or at runtime?
+
+
+Encapsulation - hiding of data
+--------------
+	- wrapping up data members and member functions into a single unit called class
+	- make the data members private and provide public getters/accessors and setters/mutators	
+	- getters give read access to the properties
+	- remove the getter of the property if you dont want to give read access
+	- setters give write access to the properties
+	- remove the setter of the property if you dont want to give write access
+
+Abstraction -  highlighting the essential features
+-----------
+	- acheived with the use of abstract classes and interfaces
+   interfaces
+	- are pure abstract classes until java 1.8
+	- all methods in an interface is by default public and abstract
+	- all variables in an interface is by default public static final
+	- they are implemented by a class
+	- interfaces do not give is-a relation to the class
+	- it is more of a protocol/rule enforced on the class
+	- a class can implement multiple interfaces
+	- an interface an extends another interface or interfaces
+
+
+class ----extends-----> class
+class ----implements-----> interface, interface, interface....
+interface ----extends-----> interface, interface, interface...
+interface ----no relation ----->  class
+	
+interface Rules{
+
+// public abstract methods
+// public static final variables
+
+// from java 1.8 and above
+// default methods - methods which have code in it
+// static methods
+
+}
+
+
+class MyClass{
+
+//declare static varibales
+//declare instance/non-static variables
+
+//static blocks
+.
+.
+
+//overloaded constructors
+
+//public getters/setters
+
+//methods
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

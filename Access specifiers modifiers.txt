@@ -30,6 +30,7 @@ synchronized( multithreading) - a method
  			      - as a block
 
 native - a method
+	- a method whose code is writtern in a language other than java
 
 static - a variable
 		- only one memoery for static variable is allocated
@@ -75,7 +76,29 @@ strictfp, transient - could explore these as well
 
 constructors
 ------------
+	- a special method
+	- has the same name as that of the class
+	- it is called/invoked automatically when an object is created
+	- does not return anything, not even void
+	- purpose is to initialize instance ( non - static) variables
+
+	-constructor overloading
+	-constructor chaining
+
+constructor chaining
+--------------------
+
+
 
 
 Scanner
 --------
+
+System.in ------> refers to the keyboard
+System.out -------> refers to the console
+
+50 y
+
+
+50
+\n - read this using nextLine
