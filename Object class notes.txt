@@ -1,0 +1,43 @@
+
+Object 
+A class implicitly extends Object
+Object is the parent class of A
+class A{
+
+	A(){
+		// super(); // this is implicitly injected by the compiler if super() is not provided
+		System.out.println("in A");
+	}
+}
+
+class B extends A{
+
+	// 2nd solution 
+	B(){
+	}
+
+	B(int mark){
+		// super(); // this is implicitly injected by the compiler if super() is not provided
+		mark = 100;
+		System.out.println("in B");
+	}
+}
+
+class C extends B{
+
+	C(){
+		// super(); // this is implicitly injected by the compiler if super() is not provided
+		// 1st solution
+		//super(50);
+		
+		System.out.println("in C");
+	}
+}
+
+class Demo{
+	public static void main(String args[]){
+		// question is - in which order are the constructors called? C B A
+		// or which class constructor is called first?
+		C c = new C();
+	}
+}

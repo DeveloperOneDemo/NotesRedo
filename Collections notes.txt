@@ -1,0 +1,49 @@
+input - process/logic - output
+
+data
+ - we store it in variables
+
+single variable -  single data
+int mark = 50;
+
+arrays - hold group of similar data
+int[] myMarks = {20,30,40};
+
+collections 
+
+- hold a group of objects
+- the object could be of different type
+- a collection grows and shrinks as you keep adding and removing objects
+- all collection apis are availablke in java.util package
+- different collections are avaible based on our requirement
+
+List - indexed, maintains the same order, allows duplicate values
+Set - Not indexed, does not maintain the same order, does not allow duplicate value
+
+CRUD
+C- Create
+R- Read
+U- Update
+D- Delete
+
+please explore
+---------------
+ArrayList , Vector, HashSet, LinkedHashSet, TreeSet
+
+1) what happens when you print an object of a user defined class on console? - it calls the toString method implicitly
+2) is there a way to print meaningful info while printing an object on the console? - yes by oeveriding the toString method
+3) We know that packages have to be imported when we use an API from that package, why did we not import java.lang package
+	when we were working with String or System or Integer? - the java.lang package is by default imported
+
+
+
+
+
+
+
+
+
+
+
+
+
