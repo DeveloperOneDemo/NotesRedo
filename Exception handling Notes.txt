@@ -1,0 +1,12 @@
+
+- program terminates abruptly
+- we could not fix the issues
+
+
+try
+catch
+finally
+throw - used to explicitly throw an exception
+throws - used beside the method signature
+	- it conveys the info to the caller that this method is capable of throwing these exception, so the 
+		caller please handle it.

@@ -1,0 +1,32 @@
+
+Input - process/logic - Output
+
+Layered Architecture - 3 tier architecture
+--------------------
+
+purpose of layered architecture is loose coupling, 
+we dont want the project to be tightly coupled
+
+
+input/output - presentation layer
+process/logic - bussiness logic/service layer
+Data access - DAO(Data Access Object) layer
+
+book management system
+
+we will use collections in DAO layer to store the data
+later we will shift to databases
+
+POJO - Plain Old Java Object, TO - Transfer Objects, VO - Value Object
+
+class BookPojo{
+	private String bookTitle;
+	private String bookAuthor;
+	private String bookGenre;
+	private int bookCost;
+	private String bookImageUrl;
+
+	//constructors
+	//public getters/setters
+	//toString
+}
