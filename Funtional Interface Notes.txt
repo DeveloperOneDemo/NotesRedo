@@ -1,0 +1,52 @@
+Functional Interfaces -  fancy term given from 1.8 version
+---------------------
+ - is an interface which has only one abstract method
+ - Eg.  Iterable, Comparator, Comparable
+
+assignments - using lambdas and inbuilt functional interfaces
+--------------------------------------------------------------
+1) program to compute the cube of a number
+2) program to compute base power number - 4 power 3
+3) program to check if a number is even - return true if even else false
+4) program to generate a random number
+5) program to print the elements of an array
+6) program to add two matrices 
+7) program to find the factorial of a number
+8) program to check if the first string is a substring of the second string - return true if yes
+
+
+
+-----------------------------------------
+from java 1.8 version interfaces can have
+	- abstract methods ( dont have body)
+	- default methods ( have body)
+	- static methods ( have body and are static)
+-----------------------------------------
+List myList = new ArrayList();
+BookDao bookDao = new BookDaoImpl();
+bookDao.method1(); // valid
+bookDao.method2(); // valid
+bookDao.method3(); // invalid - compiler error
+
+BookDaoImpl bookImpl = (BookDaoImpl) bookDao;
+bookImpl.method3(); // valid
+
+interface BookDao{
+	void method1();
+	void method2();
+}
+
+class BookDaoImpl implements BookDao, Inter1, Inter2{
+	public void method1(){
+		//
+		//	
+	}
+	public void method2(){
+		//
+		//
+	}
+	public void method3(){
+		//
+		//
+	}
+}
