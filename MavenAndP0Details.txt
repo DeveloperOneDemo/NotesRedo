@@ -1,0 +1,101 @@
+
+.jar - java archive
+.war - web archive
+.ear - enterprise archive
+
+.html - hyper text markup language
+      - web page
+      - represents the content of the page
+.xml - xtensible markup language
+     - hold data
+     - we create the tags
+
+how to create a maven project?
+------------------------------
+1) to use maven command in command prompt( without eclipse)
+
+2) to create a new maven project in eclipse ( this requires the maven plugin in eclipse - it is already there)
+
+3) to convert an existing ecplise project ( this requires the maven plugin in eclipse - it is already there)
+
+
+
+MAIN MENU
+---------
+1. Login as an Employee
+2. Login as a Customer
+3. Exit
+
+EMPLOYEE MENU
+--------------
+1. Register/Create a Customer
+2. List all Customers
+3. Logout
+
+CUSTOMER MENU
+-------------
+1. View account details
+2. Transfer money
+3. View Transaction History
+4. Logout
+
+
+Features of the project
+-----------------------
+As an employee,
+	- should be able to login
+	- should be able to register/creating a customer after logging in - C
+	- should be able to list all the customers information after logging in - R
+	- should be able to logout
+
+As a customer,
+	- should be able to login
+	- should be able to veiw account details - R
+	- should be able to transfer money to another account - 2 U
+	- should be able to view transaction history - R
+	- should be able to logout
+
+
+Files to be created
+--------------------
+1) Pojo
+	EmployeePojo
+		employeeId
+		employeePassword
+		employeeFirstName
+		employeeLastName
+		employeeContact
+		employeeAddress
+	
+	CustomerPojo
+		customerId 1234
+		customerPassword
+		customerFirstName
+		customerLastName
+		customerContact
+		customerAddress
+		accountID // simplest design over creating AccountPojo
+		accountBalance // simplest design over creating AccountPojo
+
+	// if required
+	AccountPojo
+		accountId
+		accountBalance
+		accountType
+		accountCustomerId	
+
+2) DAO layer
+	- EmployeeDao
+	- EmployeeDaoImpl
+	- CustomerDao
+	- CustomerDaoImpl
+
+3) Service layer
+	- EmployeeService
+	- EmployeeServiceImpl
+	- CustomerService
+	- CustomerServiceImpl
+
+
+
+
