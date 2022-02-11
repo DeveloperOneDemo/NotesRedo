@@ -14,10 +14,17 @@ two types of streams
 	InputStream		OutputStream
 	   FileInputStream	    FileOUtputStream
 	   DataInputStream	    DataOutputStream
-
+	   ObjectInputStream	    ObjectOutputStream
 
 - Reader, Writer, InputStream and OutputStream are abstract classes
 - streams are unidirectional
+
+Serialization/ Deserialization
+-------------------------------
+	- Any object which is persisted should be serialized and persisted
+	- A serialized object should be deserialized when it is read back
+	- ObjectOutputStream helps to Serialize the object
+	- ObjectInputStream helps to deserialize the object
 
 assignments
 -----------
@@ -26,3 +33,4 @@ assignments
 2) copy the contents of a file to another file
 3) get input from the user and encrypt the data and write to a file
 4) read the encrypted data from the file , decrypt it and print it on the console
+5) redo the serilization and deserialization demo using a different class
