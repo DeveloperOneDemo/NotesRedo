@@ -1,0 +1,28 @@
+
+IO in java
+----------
+two types of streams
+---------------------
+1) character based streams - data flows as characters
+
+	Reader			Writer
+	   FileReader		   FileWriter
+   	   BufferedReader	   
+	   InputStreamReader	
+
+2) byte based streams - data flows as bytes
+	InputStream		OutputStream
+	   FileInputStream	    FileOUtputStream
+	   DataInputStream	    DataOutputStream
+
+
+- Reader, Writer, InputStream and OutputStream are abstract classes
+- streams are unidirectional
+
+assignments
+-----------
+
+1) redo the demo programs using FileInputStream and FileOutputStream
+2) copy the contents of a file to another file
+3) get input from the user and encrypt the data and write to a file
+4) read the encrypted data from the file , decrypt it and print it on the console

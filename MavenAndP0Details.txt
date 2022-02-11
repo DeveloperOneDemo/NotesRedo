@@ -1,4 +1,11 @@
+configuration files could be of
+------------------------------
+.xml
+.yml
+.properties
+.json
 
+-------------------------------
 .jar - java archive
 .war - web archive
 .ear - enterprise archive
