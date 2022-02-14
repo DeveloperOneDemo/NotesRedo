@@ -1,0 +1,185 @@
+ANSII Sql - Standardization of querying language
+
+database dialects
+
+SQL - Structured Querying Language
+
+DB - Databases
+
+types of databases
+	- relational db : tables , rows(records) and columns(tuples), eg: Oracle, Postgres, SqlServer
+	- nosql db : collection, documents ,  eg: MongoDB
+
+MEAN stack
+
+	M - Mongo DB : DB
+	E - Express : Backend
+	A - Angular : Frontend
+	N - Node JS : Backend
+MERN stack
+	M - Mongo DB
+	E - Express
+	R - React : front end
+	N - Node js
+
+in this training we cover 
+-------------------------
+Postgres : DB
+Angular : FrontEnd
+Java (Spring rest) : BackEnd
+
+
+database - collection of tables
+table - they have rows and columns
+
+SQL queries are categorized into 5
+
+1) DDL - Data Definition Language
+	- deals with the structure of the table
+		- create, drop, alter
+
+2) DML - Data Manipulation Language
+	- deals witht he data in the table
+		- insert, update, delete
+
+3) DQL - Data Querying Language
+	- deals with fetching of the data
+		- select and its clauses
+
+4) TCL - Transaction Control Language
+	- deals with transactions
+		- comit, rollback
+		
+5) DCL - Data Control Language
+	- deals with granting and revoking priveleges to DB users
+	
+
+Concepts
+---------
+Normalization - 1NF, 2NF, 3NF
+Transactions - ACID properties
+
+MSAccess - single user DB, 
+
+Server - server takes the request, processes it and sends a response
+
+Client - sends request to the server, receives the response from the server
+
+what should a client know to contact a server?
+----------------------------------------------
+1) IP Address
+2) Port number - generally a 4 digit number, many appln have their default port numbers
+3) Protocol
+4) Credentials
+
+
+psql - is the client on POSTGRES to submit queries to the postgres server
+     - is CLI (Command Line Interface)
+other clients 
+	 - pgAdmin ( comes along with postgres installation, is a GUI)
+	 - DBeaver which has a GUI(Graphical User Interface)
+	 - Java program
+
+
+create database <db name>; -  to create a database
+
+a few basic commands - meta commands
+---------------------
+
+\dt - to list tables in the current DB
+
+\l - to list the databases 
+
+\c <db name>  - switch to a DB
+
+
+
+DDL 
+---
+CREATE TABLE student_details (stud_id int, stud_name varchar(20), stud_contact int, stud_mark int);
+
+
+ALTER TABLE user_details ADD COLUMN user_email varchar(20);
+
+try
+
+ALTER TABLE <TABLE NAME> DROP COLUMN <COLUMN NAME>
+ALTER TABLE <TABLE NAME> MODIFY COLUMN <COLUMN NAME> <DATA TYPE>
+
+we can use alter to add and drop contraints
+
+DROP TABLE user_details;
+
+TRUNCATE  - please explore and how is it different and similar from DELETE
+	   - truncate table student_details;
+	   - truncate internally executes a drop and create query
+
+DML
+---
+
+INSERT
+
+INSERT INTO student_details VALUES(102, 'XYZ', 133333, 80);
+INSERT INTO student_details(stud_id, stud_name, stud_mark) VALUES(103, 'LMN', 60);
+
+UPDATE
+
+UPDATE student_details SET stud_mark=70 WHERE stud_id=103;
+
+try
+update on different columns and different conditions
+> < >= <= = !=
+
+DELETE
+
+DELETE FROM student_details WHERE stud_id=103;
+DELETE FROM student_details;
+
+
+DQL
+----
+
+SELECT - fetches the records from a table
+
+projection - which column to project, comes after SELECT
+restriction - which rows to filter, comes with the WHERE clause
+
+
+SELECT projecttion
+   FROM table name(s)
+   WHERE condition(s)
+   GROUP BY column name(s)
+   HAVING condition(s)
+   ORDER BY column list
+
+Difference between WHERE clause and HAVING clause?
+
+what is the count of students whose name starts with 'A' city wise?
+
+
+display the student details in descing order of city with ascending order of names?
+SELECT * FROM student_details ORDER BY stud_city DESC, stud_name;
+
+assignments
+-------------
+1) display student details whose name start with 'A' or 'a'.
+2) display student details who have scored more than 80.
+3) display count of students city wise.
+4) display average score of students city wise
+5) display average score of students city wise with an average of more than 50
+6) display student details whose city is in a list of 5 cities in descending order of city
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
