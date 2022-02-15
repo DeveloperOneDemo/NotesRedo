@@ -81,6 +81,13 @@ other clients
 	 - Java program
 
 
+connect to postgres DB from command prompt using psql
+------------------------------------------------------
+1) NAvigate to bin folder of postgres and type this command
+psql --username=postgres
+
+
+
 create database <db name>; -  to create a database
 
 a few basic commands - meta commands
