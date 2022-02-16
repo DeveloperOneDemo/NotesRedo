@@ -1,0 +1,22 @@
+JDBC - Java Database Connectivity
+
+methods of statement
+--------------------
+
+Statement stmt = con.createStatement();
+
+ResultSet rs = stmt.executeQuery("select...."); // for DQL
+int rows = stmt.executeUpdate("insert/update/delete...."); // DML
+boolean status = stmt.execute("create/alter/drop..."); // DDL
+
+can interchange execute() and executeUpdate()
+
+
+Types of Statements
+-------------------
+1) Statement
+2) PreparedStatement
+	- precompiled statements
+	- compiled once and executed many times
+3) CallableStatement
+	- used to call stored procedures
