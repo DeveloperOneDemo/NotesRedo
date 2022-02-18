@@ -1,0 +1,257 @@
+
+
+3 ways to provide configuration information
+--------------------------------------------
+
+1) through external files like .xml, .yml, .properties, etc ( xml based configuration)
+2) through annotations (annotation based configuration)
+3) through Java class (Java based configuration)
+
+
+
+Contraints
+-----------
+contraints can specified
+	- at the time of creating the table
+	- can be added later
+
+constraints can be created with a name
+giving a name to a constraint , we can disable and enable the constraint
+
+2 ways to specify contraints at the time of creating the table
+--------------------------------------------------------------
+1) column level
+2) table level
+
+
+Primary key
+candidate key
+composite key
+
+employee_details
+	emp_id
+        emp_name
+
+project_details
+	project_id
+	project_name
+
+project_employee_details
+	project_id
+	employee_id
+
+501	102
+501	103
+501	110
+502	101
+502	102
+
+customers
+---------
+customer_id - 101, 102 ,103, 104
+
+contacts
+--------
+contact_id  customer_id
+301 		101 
+302		104 
+303		999
+304
+
+
+one to one relation
+-------------------
+employee_details
+	employee_id (PK)
+	employee_name
+	employee_salary
+
+address_ details
+	address_id(PK)
+	employee_id(FK)
+	address_city
+	address_zipcode
+one employee has one/many address? one,yes
+one address belongs only to one/many emplyee? oneyes
+
+one to many relation / many to one relation
+-------------------------------------------
+college_details
+	college_id(PK)
+	college_name
+student_details
+	student_id(PK)
+	student_name
+	college_id(FK)
+
+one college has one/many students? many
+one student can belong to one/many colleges? one, reframe it as Many student belong to a college
+college to student ----> one to many
+student to college -----> many to one
+
+
+many to many relation
+---------------------
+
+student_details
+	student_id (PK)
+	student_name
+course_details
+	course_id (PK)
+	course_name
+
+student_courses_details
+	st_co_id (PK)
+	student_id (FK)
+	course_id (FK)
+
+one student enrolls one/many course? many
+one course opted by one/many student? many
+
+a many to many relation needs a third table
+
+input validations - basic validations
+bussiness validations
+
+p0 tables
+---------
+employee_details
+	employee_id (PK)
+	employee_first_name
+	employee_last_name
+	......
+
+customer_details
+	customer_id(PK)
+	customer_first_name
+	customer_last_name
+	......
+
+account_details
+	account_id(PK)
+	account_name
+	account_balance
+	customer_id(FK)
+	
+transaction_details
+	transaction_id(PK)
+	from_account_id(FK)
+	to_account_id(FK)
+	transfer_amount
+	transfer_date
+	
+from_account 	from_customer_name	to_account	to_customer_name	date	transfer_amount
+
+
+
+student_courses_details
+	student_id (FK) (CK)
+	course_id (FK) (CK)
+
+
+
+
+student
+	student_id(PK)
+	student_name
+
+course
+	course_id(PK)
+	course_name
+if A determines B , the B is dependent on A
+can emp_id determine emp_name?  yes, so emp_id determines emp_name (or) emp_name is dependent on emp_id
+
+
+user_details
+
+	user_id (PK)
+	user_name
+	user_password
+	user_address_id(FK)
+	
+
+address_details
+	
+	address_id (PK)
+	address_city
+	address_zipcode
+
+
+
+(1,2,3,4)
+(5,6,7)
+
+
+(1,5)(1,6)(1,7)(2,5)(2,6)(2,7)(3,5)(3,6)(3,7)(4,5)(4,6)(4,7)
+
+2 styles of writing joins
+--------------------------
+1) theta style - old style
+
+SELECT emp_name, emp_salary, department_name FROM employee_details emp, department_details dept WHERE emp.dept_id=dept.department_id;
+
+2) Using JOIN keyword - new style
+
+SELECT emp_name, emp_salary, department_name FROM employee_details emp INNER JOIN department_details dept ON emp.dept_id=dept.department_id;
+
+types of joins
+--------------
+1) Inner Join
+2) left join
+3) right join
+4) full outter join
+5) cross join
+6) self join
+
+Self Join example
+-----------------
+employee
+	emp_id
+	emp_name
+	mgr_id
+
+emp_id emp_name mgr_id	------> emp1
+101 	ABC 
+102 	ZZZ 	101
+103 	AAA 	101
+104 	BNM 	103
+105 	QWE 	102
+
+
+emp_id emp_name mgr_id -------> emp2
+101 	ABC 
+102 	ZZZ 	101
+103 	AAA 	101
+104 	BNM 	103
+105 	QWE 	102
+
+write a query to display employee names and their manager names
+emp_name	mgr_name
+ZZZ		ABC
+AAA		ABC
+BNM		AAA
+QWE		ZZZ
+
+
+SELECT emp1.emp_name, emp2.emp_name as mgr_name 
+	FROM employee emp1 
+	SELF JOIN employee emp2 
+	ON emp1.mgr_id=emp2.emp_id;
+
+
+
+
+Joins
+
+Views
+
+Set  - UNION, UNION ALL, MINUS, INTERSECT
+
+Indexes
+
+
+
+
+
+
+
