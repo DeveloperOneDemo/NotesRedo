@@ -1,0 +1,43 @@
+<html>
+<head>
+<body>
+<h1>...<h6>
+<p>
+<li>
+<ol>
+
+very frequently tags
+--------------------
+<a>
+<img>
+<div>
+<span>
+<table> and its tags - <th><tr><td>
+html forms
+
+
+Form tags
+---------
+
+
+Assignment - use <iframe>
+-----------
+About MySelf
+
+Left side link
+1. About me in paragraphs
+2. my Qualifications in a table structure
+3. my favourite pictures with <img>
+4. Contact Me with bullets <li> <ol>
+5. Send Message - input form
+
+
+first name - text field
+last name - text field
+gender - radio
+hobby - checklist
+address line1 - text field
+state - drop down box
+submit - submit button
+clear - reset button
+
