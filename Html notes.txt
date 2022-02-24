@@ -35,9 +35,41 @@ Left side link
 first name - text field
 last name - text field
 gender - radio
-hobby - checklist
+hobby - checkbox
 address line1 - text field
 state - drop down box
 submit - submit button
 clear - reset button
+
+
+
+
+Project 0 - COnsole Based
+-------------------------
+Presentation
+Service
+DAO - JDBC
+
+Project 1 - Web Application(SPA)
+-------------------------------
+Front End
+	Angular
+Back End
+	Javalin(framework) for rest endpoints
+	Service
+	DAO - Hibernate(ORM framework)
+
+Project 2 - Web Application(SPA)
+--------------------------------
+Front End
+	Angular
+Back End
+	Spring REST(framework) for rest endpoints
+	Service
+	DAO - Spring Data(ORM framework) 
+
+
+
+
+
 

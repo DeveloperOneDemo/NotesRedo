@@ -1,0 +1,10 @@
+1) download and install nodejs ----> this is required for npm which in turn is required for installing angular/cli
+2) confirm node installation by typing "node --version" in cmd
+3) confirm the version of npm by typing "npm --version" in cmd
+4) we are ready to install angular, type "npm install -g @angular/cli" in cmd
+5) now that we have the ng command use it to create an angular project in cmd
+	- navigate to the folder where you want to create the angular project
+	- type the command "ng new <projectname>"
+	- choose y for angular routing and CSS for stylesheets
+	- now the angular project is created
+6) after creating the angular project , open the project in vs code
