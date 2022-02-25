@@ -1,10 +1,51 @@
 1) download and install nodejs ----> this is required for npm which in turn is required for installing angular/cli
 2) confirm node installation by typing "node --version" in cmd
 3) confirm the version of npm by typing "npm --version" in cmd
-4) we are ready to install angular, type "npm install -g @angular/cli" in cmd
+4) we are ready to install angular, type "npm install -g @angular/cli" in cmd, 
+		confirm the installation by typing "ng --version"
 5) now that we have the ng command use it to create an angular project in cmd
 	- navigate to the folder where you want to create the angular project
 	- type the command "ng new <projectname>"
 	- choose y for angular routing and CSS for stylesheets
 	- now the angular project is created
 6) after creating the angular project , open the project in vs code
+7) to start angular live development server of the project(so u have to be 
+					inside the project folder to start the server), in cmd type
+	ng serve 
+	(or)
+	ng serve --open
+
+
+in angular we are working with typescript, the files have extension .ts
+these .ts files are converted to .js
+
+steps to work with components
+----------------------------
+1) create the component
+2) make an entry of the component in app.module.ts
+3) use the selector of the component
+
+
+creating a component in angular
+--------------------------------
+1) Manually create the files - tedious
+
+2) use "ng generate component" command - convinient
+	- the four files are created - component.ts, component.html, component.css, component-spec.ts
+	- we can skip step 2
+
+
+
+
+String interpolation - {{ }}
+	- when we wanted to render a property of component class in the template
+property binding 
+
+	- one way property binding - []
+		- when we wanted to render a property of component class in the value of an form element
+	- two way property binding - [()]
+		- when we want to render a property of component class int the value of a form element and vice versa
+		- ngModel is an angular directive and it is available in the module FormsModule, so include FormsModule in the import section of AppModule in app.module.ts
+
+event binding - ()
+	- when we wanted to bind an event of the template to a function in the component class
