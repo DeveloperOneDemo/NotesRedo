@@ -1,0 +1,32 @@
+component - should not contain data
+service - hold data
+	- communicate with the back end
+	- hold common data accross components
+	- ng g s book
+	- this command does not create a folder
+
+@NgModule
+@Component
+@Injectable
+
+
+Forms in Angular - 2 types of forms 
+----------------
+1) Template driven Form
+	- this is what we worked in the session - Add a Book
+	- we use ngModel in [()], and angular creates the FormControl object, which represents the form element
+2) Reactive Form - preferred over template driven forms
+	- we dont use ngModel
+	- here we create the FormControl object to represent the form element
+
+Routing in angular
+------------------
+	- helps to navigate from one component to another component
+
+	- steps for routing - 3 steps
+		1) specify the route path for each of your component in app-routing.module.ts file
+		2) 2 ways
+			a)specify the <a> to route to the component.
+				MAKE SURE TO USE routerLink INSTEAD OF href -----> Important, Important, Important
+			b) see it tomorrow
+		3) specify <router-outlet> tag in the place where you want the components to be displayed

@@ -39,8 +39,9 @@ creating a component in angular
 
 String interpolation - {{ }}
 	- when we wanted to render a property of component class in the template
-property binding 
+	- this is also one way property binding
 
+property binding 
 	- one way property binding - []
 		- when we wanted to render a property of component class in the value of an form element
 	- two way property binding - [()]
@@ -49,3 +50,11 @@ property binding
 
 event binding - ()
 	- when we wanted to bind an event of the template to a function in the component class
+
+
+
+
+There are 2 ways to bring in boostrap
+-------------------------------------
+1) we can install bootstrap using npm, bootstrap libraries will get added to the node_modules
+2) we can use Bootstrap CDN(Content Delivery Network)
