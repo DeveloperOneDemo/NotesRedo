@@ -25,8 +25,8 @@ Routing in angular
 
 	- steps for routing - 3 steps
 		1) specify the route path for each of your component in app-routing.module.ts file
-		2) 2 ways
+		2) 2 ways to navigate
 			a)specify the <a> to route to the component.
 				MAKE SURE TO USE routerLink INSTEAD OF href -----> Important, Important, Important
-			b) see it tomorrow
+			b)inject Router and use this.router.navigate() in the component class 
 		3) specify <router-outlet> tag in the place where you want the components to be displayed
