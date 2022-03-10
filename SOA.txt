@@ -1,0 +1,27 @@
+SOA - Service Oriented Architecture
+SOAP - Simple Object Access Protocol
+Rest API - Representaional State
+
+
+
+
+Backend
+-------
+
+for p1
+
+javalin framework + service + Dao + Postgres
+
+jetty server
+
+no need to download tomcat server and install
+because javalin framework has a server(jetty) available in it
+
+since we have javaling framework which in turn has the server, we need not create dynamic web project in eclipse
+we have to create a java maven project in eclipse
+
+first preference is for the functionalities
+
+additional (second preference)
+----------
+custom exceptions + logging + junit + jasmin/karma

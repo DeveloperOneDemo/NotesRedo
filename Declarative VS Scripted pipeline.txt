@@ -1,0 +1,26 @@
+
+Declarative pipeline
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}
+
+
+Scripted pipeline
+
+node{
+ stage("Build") {
+   echo "Building"
+  }
+
+ stage("Test") {
+   echo 123
+  }
+}

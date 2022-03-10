@@ -1,0 +1,45 @@
+1. Logos on the left? not necessary but if possible 
+2. project details? p2 and p3 not completed yet. -mention p0 and p1 and  mention whatever has been done, relevant projects on python, java
+3. batch duration? , Jan to April
+4. work experience?, relevant experience, internship in IT can be mentioned
+
+
+
+steps for JENKINS CI for backend
+--------------------
+1) create a jenkins maven project job
+2) specify the git url in the job
+3) choose gitscm polling
+4) specify the maven goal - clean install
+5) save the job
+
+in the github repo
+------------------
+1) got ot the settings of the repo in github
+2) click webhooks
+3) add a webhook
+4) specify the payload url - http://61bb-2601-c2-c300-f8f0-28bd-c660-d359-5962.ngrok.io/github-webhook/
+	for this expose http:localhost:8080 using ngrok
+5) specify application/json
+6) keep the event as push event
+7) save the webhook
+
+To test Jenkins CI, push the code to the github repo to see the automatic build getting triggered
+
+
+assignment - jenkins CI for frontend
+
+Continous delivery using Jenkins pipeline
+
+
+
+
+
+front should have CI/CD to s3 bucket aws - using jenkins pipeline
+backend should CI/CD to ec2 instance aws - using jenkins pipeline
+
+
+
+
+
+

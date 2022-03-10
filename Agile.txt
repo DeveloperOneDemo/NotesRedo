@@ -1,0 +1,29 @@
+
+
+product owner - 1
+scrum master - 1
+developer lead -1
+developers - 3 to 4
+testing lead - 1
+testers - 2 to 3
+
+solution architects
+
+project planning
+	- all user stories are identified
+	- each user story has a story point assigned
+	- product backlog is prepared ( the list here is not)
+
+sprint1 - last for 3 to 4 weeks
+sprint1 planning
+	- based on story points and priority sprint backlog is prepared
+	- prepare sprint backlog for sprint1
+
+stand up meet
+	- every day morning
+sprint demo
+	- this takes place at the end of each sprint
+	- all stake holders are present here
+	- at the end of the sprint we get a shippable product(ready for deployemnt)
+sprint retrospection
+	
