@@ -27,8 +27,8 @@ to connect to some-postgres container from container psql
 		psql --username=postgres
 
 
-to containerize back-end application
---------------------------------------
+to containerize back-end application without docker-compose.yml
+------------------------------------------------------------------
 1) to create the image
 -------------------
 - need to create a dockerfile
@@ -50,3 +50,11 @@ to containerize back-end application
 
 6) confirm by accessing an endpoint of the backend application in postman
 	http://10.0.0.88:9999/api/books
+
+
+to containerize back-end application with docker-compose.yml
+-------------------------------------------------------------
+1) create docker-compose.yml
+2) write the neccessary configurations in the yml
+3) run the docker command 
+	docker-compose up
