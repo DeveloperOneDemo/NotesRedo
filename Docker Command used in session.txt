@@ -27,3 +27,26 @@ to connect to some-postgres container from container psql
 		psql --username=postgres
 
 
+to containerize back-end application
+--------------------------------------
+1) to create the image
+-------------------
+- need to create a dockerfile
+- has no extension
+- has a base image
+- keep it in the eclipse project folder
+
+2) change ther connection url in DBUtil.java
+
+3) build project using maven
+
+4) build the docker file using 
+	docker build . 
+	(or)
+	docker build -t javalin-backend .
+
+5) run the image to create the container
+	docker run -p 9999:4040 javalin-backend
+
+6) confirm by accessing an endpoint of the backend application in postman
+	http://10.0.0.88:9999/api/books
