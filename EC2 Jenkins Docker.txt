@@ -8,7 +8,7 @@
 	sudo yum -y install git
 	git --version
 	git config --global user.name "DeveloperOneDemo"
-	sudo
+	git config --global user.email "Developer@gmail.com"
 4) Steps to install Jenkins in EC2
 	- Add the Jenkins repo using the following command:
 		sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo

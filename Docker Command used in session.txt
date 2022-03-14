@@ -1,0 +1,29 @@
+
+to list local docker images
+---------------------------
+docker images
+
+to list running containers
+--------------------------
+docker ps
+
+to list all(exited and running ) containers
+-------------------------------------------
+docker ps -a
+
+to run the postgres image and create the container
+------------------------------------------------------
+docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -p 8888:5432 -d postgres
+
+to connect to some-postgres container from local psql
+------------------------------------------------------
+psql --username=postgres --host=10.0.0.8 --port=8888
+
+to connect to some-postgres container from container psql
+--------------------------------------------------------
+	- enter into the some-postgres container
+		docker exec -it <container ID> bash
+	- connect using psql
+		psql --username=postgres
+
+
