@@ -1,0 +1,33 @@
+
+
+spring modules
+
+spring core - IOC(Inversion of Control), DI(Dependency Injection)
+
+configure the beans
+inject the dependent beans
+
+3 types of configuration
+-------------------------
+xml based configuration
+java based configuration
+annotation based configuration
+	configure the beans - component scanning, @Component
+	inject the dependent beans - autowiring, @Autowired
+		setter injection - specify @Autowired above the setter method
+		constructor injection - specify @Autowired above the constructor
+		field injection - specify @Autowired above the feild/property
+
+2 main types of injection
+-------------------------
+constructor injection
+setter injection
+
+bean scope
+
+spring jdbc
+spring data jpa
+spring rest
+spring mvc
+spring aop
+spring logging
