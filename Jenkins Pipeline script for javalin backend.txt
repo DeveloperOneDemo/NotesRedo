@@ -1,0 +1,46 @@
+did all this in EC2 without jenkins
+------------------------------------
+1) do a git clone
+	- git clone https://github.com/DeveloperOneDemo/jenkins-bms-javalin-demo.git
+	- this clones the project from the git hub repository and brings it to the EC2
+2) build the project using maven
+	- mvn clean package
+	- this packages you project into a jar file in the target folder
+3) run the docker-compose file - staging the project
+	- docker-compose up -d
+	- docker-compose.yml had 2 services, one for the DB and the other for backend appln
+	- the respective images were pulled/ built and the contrainers were created from the images
+	- the result is 2 containers should be up and running
+
+
+docker-compose down - to exit and remove all the containers that were created by docker-compose up
+
+
+jenkins pipeline script for backend application
+------------------------------------------------
+
+pipeline {
+    agent any
+
+    stages {
+        stage('clone code') {
+            steps {
+                // Get some code from a GitHub repository
+                git (url: 'https://github.com/DeveloperOneDemo/jenkins-bms-javalin-demo.git', branch:'main')
+            }
+        }
+        stage('build code') {
+            steps {
+                // Run Maven on a Unix agent.
+                sh "mvn clean package"
+            }
+        }
+        stage('staging') {
+            steps {
+               sh "docker-compose down"    
+               sh "docker-compose up -d"
+            }
+        }
+    }
+}
+
