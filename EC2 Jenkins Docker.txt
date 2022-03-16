@@ -44,6 +44,23 @@
 		sudo systemctl enable docker
 	Finally, you can also list these commands in the user data when starting up a Docker AMI so you don't have to run them after launching a new machine.
 
-command to choose which java in ec2
-------------------------------------
-alternatives --config java
+6) Steps to install docker-compose in EC2
+	- Copy the appropriate docker-compose binary from GitHub:
+		sudo curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+
+	- NOTE: to get the latest version (thanks @spodnet): // i used this
+		sudo curl -L https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+
+	- Fix permissions after download:
+		sudo chmod +x /usr/local/bin/docker-compose
+
+	- Verify success:
+		docker-compose version
+
+	- reboot the EC2 instance
+
+7) command to change file permissions of docker.sock for jenkins pipeline script to run docker-compose command
+	sudo chmod 666 /var/run/docker.sock
+
+8) command to choose which java in ec2
+	alternatives --config java
