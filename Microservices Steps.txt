@@ -1,0 +1,78 @@
+1) we will work with 2 microservices - department service, employee service
+
+Assumptions/ notes
+------------------
+1) may not be working with pojo and work with entities directly
+2) layers will not have abstraction
+3) will be working with h2 DB - in memory DB
+4) Not using @Table and @Column
+
+
+
+API Gateways
+	- main purpose
+		- routing
+		- load balancing
+		- Zuul gateway
+
+Service-registry/discovery
+	- Eureka service registry
+	- Eureka server is a registry/small server that runs on a port number
+	- the microservices will be the eureka  client which should register themselves with the sureka server
+	- once the ms registers themselves, we can see the ms in the dashboard of eureka server
+	- steps
+		- create a spring boot project and add eureka server dependency
+		- enter configurations in appilcation.properties
+		- use @EnableEurekaServer
+		- start the server 
+		- access the eureka server's dashboard by using http://localhost:8761/
+
+		- now for the eureka clients add the eureka client depencency in pom.xml
+		- use @EnableEurekaClient
+		- application.properties file
+			#giving a name to the spring boot application
+			spring.application.name=EMPLOYEE-SERVICE
+
+			#true because this a client and has to register with the eureka server
+			eureka.client.register-with-eureka= true
+			eureka.client.fetch-registry= true
+
+			#where to go and register
+			eureka.client.service-url.defaultZone= http://localhost:8761/eureka/
+			eureka.client.instance.hostname= localhost
+
+		- start the microserves
+		- confirm listing of MS by refreshing the eureka server dashboard
+	
+
+Resilence4j Circuit breaker
+	- add the resilent4j, spring boot actuator and spring aop dependency in Employee service	
+	- put the configurations of resilence4j in the application.properties file of employee-service
+	- will switch to application.yml instead of application.properties
+	- use the @CircuitBreaker anotation and provide the fallback method
+
+Config-server
+	- first create a github repo with a file application.properties, copy the common configurations into it.
+	- second create a config server spring boot application with config server and eureka client dependency
+	- third make entries in application.properties file
+		server.port= 9296
+
+		spring.application.name: CONFIG-SERVER
+
+		spring.cloud.config.server.git.uri= https://github.com/DeveloperOneDemo/microservices-configuration.git
+		spring.cloud.config.server.git.uri.clone-on-start= true
+	- fourth use @EnableEurekaClient and @EnableConfigServer
+
+	- for each microservice add the spring cloud client dependency
+	- for each microservice create a bootstrap.yml and place these info
+		spring:
+		  cloud:
+		    config:
+		      enabled: true
+		      uri: http://localhost:9296
+	- for each microservice remove the repeated configurations
+	- for each microservice ADD THIS IS APPLICATION.PROPERTIES
+		spring.cloud.config.import-check.enabled=false
+
+	- finally start all the services in the following order
+			eureka-server, config-server, api-gateway, all microservices

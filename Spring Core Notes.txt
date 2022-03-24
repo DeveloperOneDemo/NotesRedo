@@ -23,6 +23,8 @@ annotation based configuration
 constructor injection
 setter injection
 
+field injection
+
 bean scope
 
 spring jdbc
@@ -31,3 +33,13 @@ spring rest
 spring mvc
 spring aop
 spring logging
+
+
+RAD Tool - Rapid Application Development Tool
+
+
+
+2 ways to create a spring boot project
+--------------------------------------
+1) Eclipse STS(Spring Tool Suite) - can create spring boot project directly in eclipse
+2) use the spring initialzr website
